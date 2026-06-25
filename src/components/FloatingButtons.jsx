@@ -31,9 +31,9 @@ export default function FloatingButtons() {
           onClick={() => fbTrack('InitiateCheckout', { value: 9.99, currency: 'BRL', num_items: 1 })}
           className="flex flex-col items-center justify-center py-3 px-4 text-white font-display text-xl tracking-wide gap-0.5"
         >
-          ⚽ BAIXAR O ÁLBUM POR R$9,99
+          ⚽ PACOTE COMPLETO — R$19,99
           <span className="font-body text-[10px] font-semibold opacity-85 tracking-wide">
-            Acesso imediato · Garantia de 7 dias
+            Álbum + 2 Bônus · Acesso imediato
           </span>
         </a>
       </div>

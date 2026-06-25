@@ -17,7 +17,7 @@ export default function FinalCTA() {
           ⚽ Bora pro Hexa!
         </h2>
         <p className="text-white/90 text-lg font-semibold mb-8 max-w-[520px] mx-auto">
-          Garanta o álbum da Copa e leve também o novo livro Duka Goods.
+          Garanta o pacote completo com álbum + 2 bônus por apenas R$19,99.
           Acesso imediato, imprima à vontade!
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
@@ -26,14 +26,14 @@ export default function FinalCTA() {
             variant="gold"
             size="lg"
           >
-            🎉 ÁLBUM DA COPA
+            ⚽ PACOTE COMPLETO — R$19,99
           </CTAButton>
           <CTAButton
             href="https://pay.lowify.com.br/checkout?product_id=t6NWvH"
             variant="pink"
             size="lg"
           >
-            🎨 LIVRO DUKA GOODS
+            🎨 SÓ O BÁSICO — R$9,99
           </CTAButton>
         </div>
       </div>

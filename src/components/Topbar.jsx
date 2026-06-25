@@ -43,7 +43,7 @@ export default function Topbar() {
       >
         {time}
       </span>
-      <span className="text-white/60 text-xs font-medium">· depois volta para R$49,99</span>
+      <span className="text-white/60 text-xs font-medium">· depois volta para R$59,97</span>
     </div>
   )
 }

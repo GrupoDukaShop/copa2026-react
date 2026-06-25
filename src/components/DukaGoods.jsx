@@ -1,32 +1,5 @@
 import { CTAButton } from './ui/CTAButton'
 
-const bundle = [
-  {
-    tag: '📖 Produto Principal',
-    tagColor: 'bg-copa-green',
-    title: 'Álbum de Colorir Copa 2026',
-    desc: '+30 desenhos dos 26 craques da Seleção Brasileira em estilo HQ. PDF pronto para imprimir à vontade.',
-    items: ['+30 desenhos dos jogadores', '26 convocados da Seleção', 'Estádios e taças da Copa', 'PDF imprimível à vontade'],
-    value: 'R$ 29,99',
-  },
-  {
-    tag: '🎁 Bônus 1',
-    tagColor: 'bg-copa-gold text-navy-800',
-    title: 'Atividades da Copa',
-    desc: 'Passatempos, caça-palavras, labirintos e muito mais — tudo no tema Copa 2026 para a criançada se divertir!',
-    items: ['Caça-palavras', 'Labirintos', 'Passatempos temáticos', 'Diversão garantida'],
-    value: 'R$ 9,99',
-  },
-  {
-    tag: '🎁 Bônus 2',
-    tagColor: 'bg-copa-pink',
-    title: 'Duka Goods',
-    desc: 'Um pacote com vários produtos extras — mais desenhos, mais diversão para a criançada pintar à vontade!',
-    items: ['Vários produtos inclusos', 'Desenhos extras HQ', 'Estilo cartoon', 'PDF para imprimir'],
-    value: 'R$ 19,99',
-  },
-]
-
 export default function DukaGoods() {
   return (
     <section
@@ -43,80 +16,146 @@ export default function DukaGoods() {
       <div className="relative z-10 max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 reveal">
-          <span className="inline-flex items-center gap-2 bg-copa-gold/15 border border-copa-gold/40 text-copa-gold font-display text-base tracking-wide px-5 py-2.5 rounded-full mb-4">
-            🎉 Tudo que você leva por R$9,99
+          <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white/80 font-display text-base tracking-wide px-5 py-2.5 rounded-full mb-4">
+            🛒 Escolha o seu pacote
           </span>
-          <h2 className="font-display text-[clamp(2rem,6vw,3.5rem)] leading-[.95] tracking-wide text-white mt-3">
-            O pacote completo da{' '}
+          <h2 className="font-display text-[clamp(2rem,6vw,3.2rem)] leading-[.95] tracking-wide text-white mt-3">
+            Qual opção faz mais sentido{' '}
             <em className="not-italic text-copa-gold" style={{ WebkitTextStroke: '1px #E0C400' }}>
-              Copa 2026
+              pra você?
             </em>
           </h2>
-          <p className="text-white/65 text-base font-medium mt-3 max-w-lg mx-auto">
-            Compre uma vez e leve tudo — álbum principal + 2 bônus exclusivos
-          </p>
         </div>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          {bundle.map((item, i) => (
-            <div
-              key={i}
-              className={`reveal bg-white/5 border rounded-2xl p-6 flex flex-col gap-4 ${i === 0 ? 'border-copa-green/50 shadow-[0_0_40px_rgba(0,155,58,.15)]' : 'border-white/15'}`}
-              style={{ transitionDelay: `${i * 0.1}s` }}
-            >
-              <span className={`${item.tagColor} text-white text-[10px] font-bold tracking-[2px] uppercase px-3 py-1 rounded-full self-start`}>
-                {item.tag}
+        {/* Products */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+
+          {/* FEATURED — R$19,99 */}
+          <div className="reveal relative bg-white/5 border-2 border-copa-green/60 rounded-3xl p-7 flex flex-col shadow-[0_0_60px_rgba(0,155,58,.2)]">
+            {/* Recommended badge */}
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+              <span className="bg-copa-green text-white font-display text-sm tracking-wide px-5 py-1.5 rounded-full shadow-lg whitespace-nowrap">
+                ⭐ MAIS POPULAR
               </span>
-              <div>
-                <h3 className="font-display text-[1.3rem] text-white leading-tight tracking-wide mb-1.5">
-                  {item.title}
-                </h3>
-                <p className="text-white/65 text-sm leading-relaxed">{item.desc}</p>
-              </div>
-              <ul className="flex flex-col gap-1.5 mt-auto">
-                {item.items.map(it => (
-                  <li key={it} className="flex items-center gap-2 text-white/85 text-sm font-semibold">
-                    <span className="text-copa-green-g">✅</span> {it}
-                  </li>
-                ))}
-              </ul>
-              <p className="text-white/35 text-xs font-bold tracking-wide line-through mt-1">
-                Valor separado: {item.value}
-              </p>
             </div>
-          ))}
+
+            <div className="flex justify-center mt-4 mb-5">
+              <div className="relative">
+                <div className="absolute inset-0 m-auto w-40 h-40 rounded-full bg-copa-green/20 blur-[60px]" />
+                <img
+                  src="capa2.png"
+                  alt="Pacote Completo Copa 2026"
+                  className="relative z-10 w-44 rounded-xl animate-float"
+                  style={{ filter: 'drop-shadow(0 16px 40px rgba(0,0,0,.5))' }}
+                />
+              </div>
+            </div>
+
+            <span className="inline-block bg-copa-green/20 text-copa-green-g text-[10px] font-bold tracking-[2px] uppercase px-3 py-1 rounded-full self-center mb-3">
+              Pacote Completo
+            </span>
+            <h3 className="font-display text-[1.5rem] text-white text-center leading-tight tracking-wide mb-2">
+              Álbum Copa 2026<br/>+ 2 Bônus
+            </h3>
+
+            <ul className="flex flex-col gap-2 my-4">
+              {[
+                '📖 Álbum de Colorir Copa 2026',
+                '🎁 Bônus 1: Atividades da Copa',
+                '🎁 Bônus 2: Duka Goods',
+                '⚡ Acesso imediato',
+                '🖨️ PDF para imprimir à vontade',
+                '🛡️ Garantia de 7 dias',
+              ].map(it => (
+                <li key={it} className="flex items-center gap-2 text-white/90 text-sm font-semibold">
+                  <span className="text-copa-green-g">✅</span> {it}
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-auto pt-4 border-t border-white/10 text-center">
+              <p className="text-white/35 text-sm font-semibold line-through">Separado: R$ 59,97</p>
+              <p
+                className="font-display text-white animate-pricepop my-1"
+                style={{ fontSize: 'clamp(3rem,8vw,4rem)', lineHeight: '.9', textShadow: '0 3px 0 #007A2D' }}
+              >
+                <sup className="text-[38%] align-super mt-2 inline-block">R$</sup>
+                19<sup className="text-[38%] align-super mt-2 inline-block">,99</sup>
+              </p>
+              <CTAButton
+                href="https://pay.lowify.com.br/checkout?product_id=eCUU2y"
+                size="md"
+                className="w-full mt-3"
+              >
+                ⚽ QUERO O PACOTE COMPLETO
+              </CTAButton>
+            </div>
+          </div>
+
+          {/* BUDGET — R$9,99 */}
+          <div className="reveal delay-1 bg-white/3 border border-white/15 rounded-3xl p-7 flex flex-col">
+
+            <div className="flex justify-center mb-5">
+              <div className="relative">
+                <div className="absolute inset-0 m-auto w-36 h-36 rounded-full bg-copa-gold/15 blur-[50px]" />
+                <img
+                  src="capa31.png"
+                  alt="Álbum Copa 2026 + Atividades"
+                  className="relative z-10 w-40 rounded-xl animate-float2"
+                  style={{ filter: 'drop-shadow(0 16px 40px rgba(0,0,0,.5))' }}
+                />
+              </div>
+            </div>
+
+            <span className="inline-block bg-white/10 text-white/70 text-[10px] font-bold tracking-[2px] uppercase px-3 py-1 rounded-full self-center mb-3">
+              Opção Básica
+            </span>
+            <h3 className="font-display text-[1.5rem] text-white text-center leading-tight tracking-wide mb-2">
+              Álbum Copa 2026<br/>+ Atividades da Copa
+            </h3>
+
+            <ul className="flex flex-col gap-2 my-4">
+              {[
+                '📖 Álbum de Colorir Copa 2026',
+                '🎁 Bônus 1: Atividades da Copa',
+                '⚡ Acesso imediato',
+                '🖨️ PDF para imprimir à vontade',
+                '🛡️ Garantia de 7 dias',
+              ].map(it => (
+                <li key={it} className="flex items-center gap-2 text-white/75 text-sm font-semibold">
+                  <span className="text-white/50">✅</span> {it}
+                </li>
+              ))}
+              <li className="flex items-center gap-2 text-white/30 text-sm font-semibold line-through">
+                <span>❌</span> Bônus 2: Duka Goods
+              </li>
+            </ul>
+
+            <div className="mt-auto pt-4 border-t border-white/10 text-center">
+              <p className="text-white/35 text-sm font-semibold line-through">Separado: R$ 39,98</p>
+              <p
+                className="font-display text-white/80 my-1"
+                style={{ fontSize: 'clamp(2.5rem,7vw,3.2rem)', lineHeight: '.9' }}
+              >
+                <sup className="text-[38%] align-super mt-2 inline-block">R$</sup>
+                9<sup className="text-[38%] align-super mt-2 inline-block">,99</sup>
+              </p>
+              <CTAButton
+                href="https://pay.lowify.com.br/checkout?product_id=t6NWvH"
+                variant="gold"
+                size="md"
+                className="w-full mt-3"
+              >
+                🎨 SÓ O BÁSICO POR R$9,99
+              </CTAButton>
+            </div>
+          </div>
         </div>
 
-        {/* Total + CTA */}
-        <div className="reveal text-center bg-white/5 border border-copa-gold/30 rounded-3xl p-8 md:p-12 max-w-xl mx-auto">
-          <p className="text-white/50 text-sm font-semibold line-through mb-1">Valor total: R$ 59,97</p>
-          <p className="text-copa-gold font-display text-lg tracking-wide mb-1">Hoje você leva tudo por</p>
-          <p
-            className="font-display text-white animate-pricepop"
-            style={{
-              fontSize: 'clamp(4rem,12vw,6rem)',
-              lineHeight: '.9',
-              textShadow: '0 4px 0 #007A2D, 0 8px 24px rgba(0,155,58,.4)',
-            }}
-          >
-            <sup className="text-[36%] align-super mt-3 inline-block">R$</sup>
-            9<sup className="text-[36%] align-super mt-3 inline-block">,99</sup>
-          </p>
-          <p className="text-white/40 text-xs font-semibold mt-2 mb-7 tracking-wide">
-            Pagamento único · acesso imediato · PDF para imprimir à vontade
-          </p>
-          <CTAButton
-            href="https://pay.lowify.com.br/checkout?product_id=eCUU2y"
-            size="lg"
-            className="w-full sm:w-auto"
-          >
-            ⚽ QUERO O PACOTE COMPLETO
-          </CTAButton>
-          <p className="text-white/40 text-xs font-bold tracking-wide mt-4">
-            🛡️ Garantia de 7 dias · dinheiro de volta sem perguntas
-          </p>
-        </div>
+        {/* Anchor nudge */}
+        <p className="text-center text-white/40 text-sm font-semibold mt-8 reveal">
+          💡 Por apenas <strong className="text-copa-gold">R$10 a mais</strong> você leva o Duka Goods e economiza R$39,98 no total
+        </p>
       </div>
     </section>
   )

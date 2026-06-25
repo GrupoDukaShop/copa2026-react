@@ -38,7 +38,7 @@ export default function Hero() {
         <div className="text-center md:text-left">
           {/* Top badge */}
           <div className="inline-flex items-center gap-2 bg-copa-gold/10 border border-copa-gold/35 text-copa-gold text-[11px] font-bold tracking-[2.5px] uppercase px-4 py-1.5 rounded-full mb-5">
-            ⚽ Álbum de Colorir Copa 2026 + 2 Bônus
+            ⚽ Pacote Completo · Álbum + 2 Bônus Exclusivos
           </div>
 
           <ViewersBadge />
@@ -60,14 +60,23 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="text-white/80 text-base md:text-lg leading-relaxed max-w-[460px] mb-7 mx-auto md:mx-0 font-medium">
-            O livro de colorir com os <strong className="text-white">26 craques da Seleção Brasileira</strong>.
+          <p className="text-white/80 text-base md:text-lg leading-relaxed max-w-[460px] mb-5 mx-auto md:mx-0 font-medium">
+            O pacote completo com os <strong className="text-white">26 craques da Seleção Brasileira</strong> + 2 bônus exclusivos.
             Imprima em casa, pinte do seu jeito e entre no clima da Copa!
           </p>
 
+          {/* What's included */}
+          <div className="flex flex-col gap-1.5 mb-6 max-w-[400px] mx-auto md:mx-0">
+            {['📖 Álbum de Colorir Copa 2026', '🎁 Bônus 1: Atividades da Copa', '🎁 Bônus 2: Duka Goods'].map(item => (
+              <div key={item} className="flex items-center gap-2 text-white/90 text-sm font-semibold">
+                <span className="text-copa-green-g">✅</span> {item}
+              </div>
+            ))}
+          </div>
+
           {/* Price */}
           <div className="mb-7">
-            <p className="text-white/40 text-[15px] font-semibold line-through mb-1">De R$ 49,99 por apenas</p>
+            <p className="text-white/40 text-[15px] font-semibold line-through mb-1">Separado custaria R$ 59,97 — hoje por apenas</p>
             <div className="flex items-center gap-3 flex-wrap justify-center md:justify-start">
               <span
                 className="font-display text-white animate-pricepop"
@@ -78,21 +87,21 @@ export default function Hero() {
                 }}
               >
                 <sup className="text-[38%] align-super mt-3 inline-block">R$</sup>
-                9
+                19
                 <sup className="text-[38%] align-super mt-3 inline-block">,99</sup>
               </span>
               <span className="bg-copa-green text-white font-display text-xl w-16 h-16 rounded-full flex items-center justify-center -rotate-12 shadow-[0_4px_16px_rgba(0,155,58,.5)] border-2 border-white/20 flex-shrink-0">
-                -84%
+                -67%
               </span>
             </div>
             <p className="text-white/40 text-xs font-semibold mt-2 tracking-wide">
-              +30 desenhos · acesso imediato · PDF para imprimir à vontade
+              3 produtos · acesso imediato · PDF para imprimir à vontade
             </p>
           </div>
 
           {/* CTA */}
           <CTAButton href="https://pay.lowify.com.br/checkout?product_id=eCUU2y" size="lg" className="mx-auto md:mx-0">
-            ⚽ QUERO O ÁLBUM AGORA
+            ⚽ QUERO O PACOTE COMPLETO
           </CTAButton>
 
           {/* Guarantee strip */}
