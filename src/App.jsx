@@ -8,7 +8,6 @@ import Preview        from './components/Preview'
 import DukaGoods      from './components/DukaGoods'
 import HowItWorks     from './components/HowItWorks'
 import Features       from './components/Features'
-import AlbumContents  from './components/AlbumContents'
 import Testimonials   from './components/Testimonials'
 import Guarantee      from './components/Guarantee'
 import Offer          from './components/Offer'
@@ -38,12 +37,11 @@ export default function App() {
       <main>
         <Hero />
         <StatsBar />
-        <Preview />
         <DukaGoods />
+        <Preview />
         <HowItWorks />
-        <Features />
-        <AlbumContents />
         <Testimonials />
+        <Features />
         <Guarantee />
         <Offer />
         <FAQ />
