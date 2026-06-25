@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minha Copa 2026 — Livro de Colorir da Seleção</title>
+<meta name="description" content="O álbum de colorir oficial da Seleção Brasileira para a Copa 2026. +30 desenhos dos 26 convocados em estilo HQ. PDF para imprimir à vontade por apenas R$14,99. Pague no Pix com acesso imediato.">
+<meta property="og:title" content="Minha Copa 2026 — Livro de Colorir da Seleção">
+<meta property="og:description" content="+30 desenhos dos craques da Seleção para colorir. Imprima em casa, pinte do seu jeito! Por apenas R$14,99.">
+<meta property="og:image" content="capa2.png">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Luckiest+Guy&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+:root{
+  /* PALETA COPA DO MUNDO BRASIL */
+  --green:#00a651;--green-d:#007a3b;--green-l:#37cf78;
+  --yellow:#ffd400;--yellow-d:#e0b000;
+  --blue:#0a2e7a;--blue-d:#06205c;--blue-l:#2a5fc0;
+  --cream:#fffbf0;--white:#ffffff;--ink:#13203f;
+  --pix:#32bcad;
+  --fd:'Luckiest Guy',cursive;--fb:'Nunito',sans-serif;--fp:'Anton',sans-serif;
+  --line:6px 7px 0 var(--ink);--line-sm:4px 5px 0 var(--ink);
+}
+body{font-family:var(--fb);background:var(--cream);color:var(--blue);overflow-x:hidden;line-height:1.5}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='44' height='44' viewBox='0 0 44 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2300a651' fill-opacity='0.05'%3E%3Ccircle cx='22' cy='22' r='3'/%3E%3C/g%3E%3C/svg%3E");pointer-events:none;z-index:0}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:6px}
+
+/* ===== BOTÕES estilo HQ com brilho ===== */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--fd);font-size:1.2rem;letter-spacing:.5px;padding:17px 36px;border-radius:14px;border:3px solid var(--ink);cursor:pointer;text-decoration:none;position:relative;overflow:hidden;line-height:1;box-shadow:5px 6px 0 var(--ink);transition:transform .12s,box-shadow .12s}
+.btn::before{content:'';position:absolute;top:-10%;left:-60%;width:36%;height:120%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);pointer-events:none}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:8px 9px 0 var(--ink)}
+.btn:active{transform:translate(2px,3px);box-shadow:2px 2px 0 var(--ink)}
+.btn:hover::before{animation:shine .7s ease}
+.btn-primary{background:var(--green);color:#fff}
+.btn-soft{background:var(--yellow);color:var(--ink)}
+.btn-shine::before{animation:shine 3.6s ease-in-out infinite}
+@keyframes shine{0%{left:-60%}28%,100%{left:150%}}
+@media(prefers-reduced-motion:reduce){.btn-shine::before,.btn:hover::before{animation:none}}
+
+/* selos de pagamento */
+.pay{display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:16px}
+.pay .pp{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;letter-spacing:.3px;padding:4px 11px;border-radius:8px;border:2px solid var(--ink);background:#fff;color:var(--ink)}
+.pay .pix{background:var(--pix);color:#fff;border-color:var(--ink)}
+.pay .lock{font-size:11px;font-weight:700;color:inherit;opacity:.85;display:inline-flex;align-items:center;gap:4px}
+.pay-light .pp{border-color:rgba(255,255,255,.25)}
+.pay-light .lock{color:rgba(255,255,255,.6)}
+/* selos em imagem (gerados no Nano Banana) */
+.pay-badge{display:inline-flex;align-items:center;justify-content:center;background:#fff;border:3px solid var(--ink);border-radius:16px;padding:8px 14px;margin-top:16px;box-shadow:var(--line-sm)}
+.pay-badge img{max-width:300px;width:100%;height:auto;display:block}
+.pay-note2{display:block;font-size:11px;font-weight:700;margin-top:8px;letter-spacing:.3px}
+.pay-note2.light{color:rgba(255,255,255,.72)}
+.guar-seal-img{width:150px;height:auto;flex-shrink:0;transform:rotate(-5deg);filter:drop-shadow(4px 5px 0 rgba(0,0,0,.25))}
+@media(max-width:860px){.pay-badge{margin-left:auto;margin-right:auto}}
+
+/* selo garantia */
+.guar{display:inline-flex;align-items:center;gap:10px;background:rgba(0,166,81,.16);border:2px dashed var(--green-l);border-radius:14px;padding:10px 16px;margin-top:18px;max-width:390px}
+.guar .gi{font-size:1.8rem;line-height:1;flex-shrink:0}
+.guar .gt{font-size:13px;font-weight:600;color:var(--green-l);text-align:left;line-height:1.35}
+.guar .gt b{font-family:var(--fd);font-weight:400;font-size:15px;color:#fff}
+
+/* ===== TOPBAR ===== */
+.topbar{background:var(--ink);color:var(--yellow);font-weight:600;font-size:14px;text-align:center;padding:9px 16px;position:relative;z-index:100;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+.topbar .ctx{color:rgba(255,255,255,.7);font-weight:500}
+.topbar .tmr{background:var(--green);color:#fff;font-weight:700;font-family:var(--fd);padding:2px 13px;border-radius:100px;font-size:17px;letter-spacing:1px;min-width:78px;display:inline-block}
+
+/* ===== HERO ===== */
+.hero{position:relative;overflow:hidden;background:linear-gradient(165deg,#103aa0 0%,var(--blue-d) 100%);z-index:1}
+.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.04) 0 1px,transparent 1px 84px),repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 1px,transparent 1px 84px);animation:grid 22s linear infinite}
+@keyframes grid{to{background-position:84px 84px}}
+@media(prefers-reduced-motion:reduce){.hero::before{animation:none}}
+.blob{position:absolute;border-radius:50%;filter:blur(95px);opacity:.32;pointer-events:none}
+.b1{width:520px;height:520px;background:var(--green);top:-120px;right:-110px}
+.b2{width:440px;height:440px;background:var(--yellow);bottom:-160px;left:-120px}
+.b3{width:300px;height:300px;background:var(--green-l);top:40%;left:32%;opacity:.18}
+.hero-inner{position:relative;z-index:2;max-width:1120px;margin:0 auto;padding:54px 24px 64px;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+@media(max-width:860px){.hero-inner{grid-template-columns:1fr;gap:36px;padding:44px 20px 52px;text-align:center}.hero-right{order:-1}}
+
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,212,0,.14);border:2px solid var(--yellow);color:var(--yellow);font-weight:600;font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:22px}
+.eyebrow::before{content:'⚽';font-size:15px}
+h1.htitle{font-family:var(--fd);font-size:clamp(3.4rem,8.5vw,6rem);line-height:.9;color:#fff;margin-bottom:18px}
+h1.htitle em{font-style:normal;color:var(--yellow);display:block;-webkit-text-stroke:2px var(--yellow-d)}
+h1.htitle .hg{color:var(--green-l);-webkit-text-stroke:2px var(--green-d)}
+.hsub{font-size:clamp(15px,2.4vw,18px);color:rgba(255,255,255,.82);line-height:1.55;max-width:470px;margin-bottom:26px;font-weight:500}
+@media(max-width:860px){.hsub{margin:0 auto 26px}}
+.price-old{color:rgba(255,255,255,.5);font-size:16px;font-weight:600;text-decoration:line-through;margin-bottom:2px}
+.price-new{font-family:var(--fp);font-weight:400;font-size:clamp(4.2rem,13vw,6.4rem);color:#fff;line-height:.9;letter-spacing:1px;text-shadow:0 3px 0 var(--green-d),0 5px 0 var(--green-d),0 9px 14px rgba(0,0,0,.45);animation:pricePop 2.4s ease-in-out infinite}
+.price-new sup{font-size:42%;vertical-align:top;margin-top:10px;display:inline-block;text-shadow:0 2px 0 var(--green-d)}
+.price-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.off-badge{font-family:var(--fp);font-size:1.45rem;background:var(--green);color:#fff;border:3px solid var(--ink);border-radius:50%;width:76px;height:76px;display:flex;align-items:center;justify-content:center;transform:rotate(-10deg);box-shadow:3px 4px 0 var(--ink);flex-shrink:0}
+@keyframes pricePop{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}
+@media(max-width:860px){.price-row{justify-content:center}}
+@media(prefers-reduced-motion:reduce){.price-new,.oprice{animation:none}}
+.price-note{color:rgba(255,255,255,.64);font-size:13px;font-weight:600;margin:6px 0 22px}
+@media(max-width:860px){.guar{margin-left:auto;margin-right:auto}.pay{justify-content:center}}
+
+/* livro */
+.hero-right{display:flex;justify-content:center;align-items:center;position:relative}
+.book-stack{position:relative;width:330px;height:430px;display:flex;align-items:center;justify-content:center}
+.book-glow{position:absolute;width:280px;height:280px;background:var(--yellow);border-radius:50%;filter:blur(70px);opacity:.28;z-index:1}
+.book-cover-img{width:900px;filter:drop-shadow(0 28px 55px rgba(0,0,0,.55));animation:float 4s ease-in-out infinite;position:relative;z-index:3;border-radius:12px}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-13px) rotate(-2deg)}}
+@media(prefers-reduced-motion:reduce){.book-cover-img{animation:none}}
+.bf{position:absolute;font-family:var(--fd);font-size:.92rem;padding:7px 14px;border-radius:12px;border:3px solid var(--ink);box-shadow:3px 4px 0 var(--ink);white-space:nowrap;z-index:10;animation:wg 3.4s ease-in-out infinite}
+.bf1{top:-14px;right:-18px;background:var(--yellow);color:var(--ink)}
+.bf2{bottom:18px;left:-26px;background:var(--green);color:#fff;animation-delay:1.5s}
+@keyframes wg{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+@media(prefers-reduced-motion:reduce){.bf{animation:none}}
+
+/* ===== STRIP ===== */
+.strip{background:var(--yellow);border-top:4px solid var(--ink);border-bottom:4px solid var(--ink);padding:18px 20px;display:flex;justify-content:center;gap:clamp(18px,5vw,58px);flex-wrap:wrap;position:relative;z-index:2}
+.si{display:flex;align-items:center;gap:11px;color:var(--blue);font-weight:700;font-size:clamp(12px,2vw,14px);line-height:1.15}
+.sn{font-family:var(--fd);font-size:2.7rem;line-height:.9;color:var(--green-d)}
+
+/* ===== PROVA SOCIAL ===== */
+.proof{background:var(--white);border-bottom:4px solid var(--ink);padding:16px 20px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;text-align:center}
+.proof .stars{color:var(--yellow-d);font-size:18px;letter-spacing:2px}
+.proof .pt{font-size:14px;font-weight:600;color:var(--blue)}
+.proof .pt b{font-family:var(--fd);font-weight:400;font-size:19px;color:var(--green-d)}
+
+/* ===== SECTIONS ===== */
+section{position:relative;z-index:1}
+.container{max-width:1060px;margin:0 auto;padding:0 24px}
+.sec{padding:74px 0}
+.sec-alt{background:var(--white)}
+.sec-dark{background:var(--blue)}
+.lbl{display:inline-block;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--green);margin-bottom:11px}
+.lbl-l{color:var(--yellow)}
+.stitle{font-family:var(--fd);font-size:clamp(2.2rem,6vw,3.7rem);line-height:.98;color:var(--blue);margin-bottom:14px}
+.stitle-y{color:var(--yellow)}
+.sbody{font-size:clamp(15px,2vw,17px);color:#5a6270;line-height:1.6;max-width:580px;font-weight:500}
+.sbody-d{color:rgba(255,255,255,.76)}
+.center{text-align:center}
+.center .sbody{margin-left:auto;margin-right:auto}
+
+/* ===== PREVIEW ===== */
+.preview-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px;margin-top:42px;max-width:780px;margin-left:auto;margin-right:auto}
+.pv{position:relative;padding-bottom:14px}
+.pv-card{border:4px solid var(--ink);border-radius:20px;overflow:hidden;box-shadow:var(--line);background:#fff;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center}
+.pv-card img{width:100%;height:100%;object-fit:cover}
+.pv-more{border:4px dashed var(--ink);background:repeating-linear-gradient(45deg,#fff,#fff 12px,#eafaf0 12px,#eafaf0 24px);flex-direction:column;gap:8px;text-align:center;padding:20px}
+.pv-more .em{font-size:2.6rem}
+.pv-more .tx{font-family:var(--fd);font-size:1.4rem;color:var(--blue);line-height:1}
+.pv-more .sx{font-size:12px;font-weight:600;color:#8a9}
+.pv-tag{position:absolute;bottom:0;left:50%;transform:translateX(-50%);font-family:var(--fd);font-size:1rem;font-weight:700;padding:5px 18px;border-radius:100px;border:3px solid var(--ink);white-space:nowrap;box-shadow:3px 4px 0 var(--ink)}
+.pv-tag.y{background:var(--yellow);color:var(--blue)}
+.pv-tag.g{background:var(--green);color:#fff}
+.pv-note{text-align:center;color:#aaa;font-size:13px;font-weight:600;margin-top:26px}
+
+/* ===== COMO FUNCIONA ===== */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:46px}
+@media(max-width:720px){.steps{grid-template-columns:1fr;gap:16px}}
+.step{position:relative;background:var(--cream);border:3px solid var(--ink);border-radius:22px;padding:30px 24px 26px;box-shadow:var(--line);text-align:center}
+.step .num{position:absolute;top:-20px;left:50%;transform:translateX(-50%);width:46px;height:46px;border-radius:50%;background:var(--green);border:3px solid var(--ink);font-family:var(--fd);font-size:1.5rem;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:2px 3px 0 var(--ink)}
+.step .si2{font-size:2.4rem;margin:14px 0 10px;display:block}
+.step h3{font-family:var(--fd);font-size:1.3rem;color:var(--blue);margin-bottom:6px}
+.step p{font-size:13.5px;color:#777;font-weight:500;line-height:1.5}
+
+/* ===== FEATURES ===== */
+.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:20px;margin-top:46px}
+.fc{background:var(--cream);border:3px solid var(--ink);border-radius:26px;padding:30px 26px;box-shadow:var(--line);transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden}
+.fc::before{content:'';position:absolute;top:0;left:0;right:0;height:6px;background:var(--green)}
+.fc:nth-child(2)::before{background:var(--yellow)}
+.fc:nth-child(3)::before{background:var(--blue-l)}
+.fc:nth-child(4)::before{background:var(--yellow)}
+.fc:nth-child(5)::before{background:var(--blue-l)}
+.fc:hover{transform:translateY(-5px);box-shadow:6px 13px 0 var(--ink)}
+.fi{font-size:2.6rem;margin-bottom:14px;display:block}
+.fc h3{font-family:var(--fd);font-size:1.35rem;color:var(--blue);margin-bottom:7px}
+.fc p{font-size:14px;color:#777;line-height:1.55;font-weight:500}
+
+/* ===== ÁLBUM (dark) ===== */
+.bki{background:rgba(255,255,255,.06);border:3px solid var(--yellow);border-radius:28px;padding:34px 30px;max-width:700px;margin:46px auto 0}
+.bno{font-size:3rem;margin-bottom:8px}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 14px;border-radius:100px;margin-bottom:14px;background:var(--green);color:#fff}
+.bki h3{font-family:var(--fd);font-size:1.5rem;color:#fff;margin-bottom:10px;line-height:1.15}
+.bki>p{font-size:14px;color:rgba(255,255,255,.74);line-height:1.55;font-weight:500;margin-bottom:22px}
+.bki ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:11px}
+@media(max-width:520px){.bki ul{grid-template-columns:1fr}}
+.bki li{color:rgba(255,255,255,.9);font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px}
+
+/* ===== DEPOIMENTOS ===== */
+.tg{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px;margin-top:46px}
+.tc{background:var(--white);border:3px solid var(--ink);border-radius:26px;padding:26px;box-shadow:var(--line)}
+.tc-badge{display:inline-flex;align-items:center;gap:6px;background:#25d366;color:#fff;font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:3px 12px;border-radius:100px;margin-bottom:13px}
+.ts{color:var(--yellow-d);font-size:15px;margin-bottom:11px;letter-spacing:2px;display:block}
+.tc p{font-size:15px;color:#555;line-height:1.6;font-weight:500;margin-bottom:18px;font-style:italic}
+.ta{display:flex;align-items:center;gap:12px}
+.av{width:46px;height:46px;border-radius:50%;background:var(--green);border:3px solid var(--ink);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;overflow:hidden;color:#fff}
+.av img{width:100%;height:100%;object-fit:cover}
+.an{font-weight:700;font-size:14px;color:var(--blue)}
+.ar{font-size:12px;color:#999;font-weight:600}
+
+/* ===== GARANTIA (bloco) ===== */
+.guar-sec{background:var(--green);border-top:4px solid var(--ink);border-bottom:4px solid var(--ink)}
+.guar-box{max-width:780px;margin:0 auto;display:flex;align-items:center;gap:30px;flex-wrap:wrap;justify-content:center;text-align:center}
+.guar-seal{width:120px;height:120px;border-radius:50%;background:var(--yellow);border:5px solid var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;box-shadow:5px 6px 0 var(--ink);transform:rotate(-6deg)}
+.guar-seal .n{font-family:var(--fd);font-size:2.8rem;line-height:.8;color:var(--ink)}
+.guar-seal .d{font-family:var(--fd);font-size:1rem;color:var(--ink);letter-spacing:1px}
+.guar-txt{max-width:420px;text-align:left}
+@media(max-width:620px){.guar-txt{text-align:center}}
+.guar-txt h2{font-family:var(--fd);font-size:clamp(1.8rem,5vw,2.6rem);color:#fff;line-height:1;margin-bottom:10px}
+.guar-txt p{color:rgba(255,255,255,.95);font-size:15px;font-weight:500;line-height:1.55}
+
+/* ===== OFERTA ===== */
+.offer-sec{background:linear-gradient(135deg,var(--blue-d),var(--blue));overflow:hidden}
+.offer-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 50%,rgba(0,166,81,.14) 0,transparent 60%),radial-gradient(circle at 20% 50%,rgba(255,212,0,.12) 0,transparent 60%)}
+.ob{max-width:620px;margin:0 auto;background:rgba(255,255,255,.05);border:3px solid var(--yellow);border-radius:34px;padding:clamp(30px,6vw,56px);position:relative;box-shadow:0 0 70px rgba(0,166,81,.2);text-align:center}
+.obt{display:inline-block;background:var(--green);color:#fff;font-weight:700;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:6px 20px;border-radius:100px;margin-bottom:24px}
+.ol{list-style:none;text-align:left;margin:22px 0}
+.ol li{padding:12px 0;font-size:15px;font-weight:600;color:rgba(255,255,255,.92);border-bottom:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:12px}
+.ol li:last-child{border:none}
+.ol .ck{font-size:18px;flex-shrink:0}
+.oold{color:rgba(255,255,255,.5);font-size:15px;font-weight:600;text-decoration:line-through}
+.oprice{font-family:var(--fp);font-weight:400;font-size:clamp(5rem,15vw,8rem);color:#fff;line-height:.9;letter-spacing:1px;text-shadow:0 3px 0 var(--green-d),0 6px 0 var(--green-d),0 10px 16px rgba(0,0,0,.5);animation:pricePop 2.4s ease-in-out infinite}
+.oprice sup{font-size:38%;vertical-align:top;margin-top:14px;display:inline-block;text-shadow:0 2px 0 var(--green-d)}
+.onote{color:rgba(255,255,255,.6);font-size:13px;font-weight:600;margin-bottom:24px}
+
+/* ===== FAQ ===== */
+.fw{max-width:680px;margin:46px auto 0}
+.fi2{background:var(--white);border:3px solid var(--ink);border-radius:18px;margin-bottom:14px;box-shadow:var(--line-sm);overflow:hidden}
+.fq{width:100%;padding:19px 24px;font-family:var(--fb);font-size:16px;font-weight:700;color:var(--blue);background:none;border:none;cursor:pointer;text-align:left;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.fa2{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s;font-size:15px;color:#666;line-height:1.6;font-weight:500;padding:0 24px}
+.fa2.open{max-height:260px;padding:0 24px 19px}
+.farr{font-size:22px;transition:transform .3s;color:var(--green);flex-shrink:0;font-weight:400}
+.fq.open .farr{transform:rotate(45deg)}
+
+/* ===== FINAL CTA ===== */
+.final{background:var(--green);border-top:4px solid var(--ink);padding:74px 20px;text-align:center;position:relative;overflow:hidden}
+.final::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent 0 20px,rgba(0,0,0,.05) 20px 21px)}
+.final h2{font-family:var(--fd);font-size:clamp(2rem,7vw,3.8rem);color:#fff;margin-bottom:10px;position:relative}
+.final p{color:rgba(255,255,255,.95);font-size:17px;font-weight:600;margin-bottom:30px;position:relative}
+.final .pay{position:relative}
+
+/* ===== FOOTER ===== */
+footer{background:var(--ink);color:rgba(255,255,255,.45);text-align:center;padding:30px 20px;font-size:13px;font-weight:600}
+footer a{color:rgba(255,255,255,.55);text-decoration:none}
+footer a:hover{color:var(--yellow)}
+.fl{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:10px}
+
+/* ===== STICKY MOBILE ===== */
+.stick{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--green);border-top:3px solid var(--ink);padding:10px 16px;z-index:998;box-shadow:0 -4px 20px rgba(0,0,0,.25)}
+.stick a{display:flex;align-items:center;justify-content:center;gap:8px;text-align:center;color:#fff;font-family:var(--fd);font-size:1.3rem;text-decoration:none}
+.stick small{display:block;font-family:var(--fb);font-size:10px;font-weight:600;opacity:.9;letter-spacing:.3px}
+@media(max-width:600px){.stick{display:block}body{padding-bottom:66px}}
+
+/* ===== WHATSAPP FLOAT ===== */
+.wa{position:fixed;right:18px;bottom:78px;width:58px;height:58px;border-radius:50%;background:#25d366;border:3px solid var(--ink);box-shadow:3px 4px 0 var(--ink);display:flex;align-items:center;justify-content:center;z-index:997;text-decoration:none;transition:transform .15s}
+.wa:hover{transform:scale(1.08)}
+.wa svg{width:30px;height:30px;fill:#fff}
+.wa-img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
+@media(min-width:601px){.wa{bottom:24px}}
+
+/* ===== REVEAL ===== */
+.rev{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+.rev.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+@media(prefers-reduced-motion:reduce){.rev{opacity:1;transform:none}}
+</style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '4234477643457645');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=4234477643457645&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body onload="fbq('track', 'ViewContent', {content_name: 'Álbum de Colorir Copa 2026', content_category: 'Livro Digital', value: 14,99, currency: 'BRL'})">
+
+<!-- TOPBAR -->
+<div class="topbar">
+  ⏰ Oferta de lançamento expira em <span class="tmr" id="tmr">29:59</span>
+  <span class="ctx">· depois volta para R$49,99</span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Copa do Mundo 2026 · Edição Oficial</div>
+      <h1 class="htitle">Minha <em>Copa</em> <span class="hg">2026</span></h1>
+      <p class="hsub">O livro de colorir com os 26 craques da Seleção Brasileira. Imprima em casa, pinte do seu jeito e entre no clima da Copa!</p>
+      <div style="margin-bottom:8px">
+        <div class="price-old">De R$ 49,99 por apenas</div>
+        <div class="price-row">
+          <div class="price-new"><sup>R$</sup>14<sup>,99</sup></div>
+          <span class="off-badge">-84%</span>
+        </div>
+        <div class="price-note">+30 desenhos · acesso imediato · PDF para imprimir à vontade</div>
+      </div>
+      <div>
+        <a href="https://pay.cakto.com.br/37oj6xq_921364" onclick="fbq('track', 'InitiateCheckout', {value: 14,99, currency: 'BRL', num_items: 1})" class="btn btn-primary btn-shine">⚽ QUERO O ÁLBUM AGORA</a>
+        <div class="guar">
+          <span class="gi">🛡️</span>
+          <span class="gt"><b>Garantia de 7 dias.</b> Não gostou? Devolvemos cada centavo, sem perguntas.</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="book-stack">
+        <div class="book-glow"></div>
+        <img src="capa2.png" alt="Capa do Álbum de Colorir Copa 2026" class="book-cover-img" width="300">
+        <div class="bf bf1">🎨 +30 Desenhos!</div>
+        <div class="bf bf2">✅ PDF Imprimível</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="si"><span class="sn">26</span><div>Jogadores<br>da Seleção</div></div>
+  <div class="si"><span class="sn">30+</span><div>Páginas para<br>colorir</div></div>
+  <div class="si"><span class="sn">R$14,99</span><div>Preço único<br>sem mensalidade</div></div>
+  <div class="si"><span class="sn">∞</span><div>Impressões<br>permitidas</div></div>
+</div>
+
+<!-- PROVA SOCIAL -->
+<div class="proof">
+  <span class="stars">★★★★★</span>
+  <span class="pt"><b id="famcount">1.240</b> famílias já baixaram e estão colorindo a Copa em casa</span>
+</div>
+
+<!-- PREVIEW -->
+<section class="sec sec-alt">
+  <div class="container">
+    <div class="center rev">
+      <span class="lbl">Veja por dentro</span>
+      <h2 class="stitle">Algumas páginas do álbum</h2>
+      <p class="sbody">Traços grossos no estilo HQ — fácil de colorir com lápis, canetinha ou tinta.</p>
+    </div>
+    <div class="preview-grid">
+      <div class="pv rev d1">
+        <div class="pv-card"><img src="pagina_marqui.png" alt="Página do Marquinhos para colorir"></div>
+        <span class="pv-tag y">Marquinhos ⚡</span>
+      </div>
+      <div class="pv rev d2">
+        <div class="pv-card"><img src="pagina_endrick.png" alt="Página do Endrick para colorir"></div>
+        <span class="pv-tag g">Endrick 👑</span>
+      </div>
+      <div class="pv rev d3">
+        <div class="pv-card pv-more">
+          <span class="em">🎨</span>
+          <span class="tx">+28 páginas<br>te esperando</span>
+          <span class="sx">craques, estádios, taças e bolas</span>
+        </div>
+      </div>
+    </div>
+    <p class="pv-note">⚠️ Prévia em baixa resolução — o arquivo original tem qualidade total para impressão</p>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="sec">
+  <div class="container">
+    <div class="center rev">
+      <span class="lbl">Simples assim</span>
+      <h2 class="stitle">Como funciona</h2>
+      <p class="sbody">Do clique ao desenho impresso em poucos minutos. Sem complicação.</p>
+    </div>
+    <div class="steps">
+      <div class="step rev d1">
+        <span class="num">1</span>
+        <span class="si2">🛒</span>
+        <h3>Clique e compre</h3>
+        <p>Toque no botão e finalize com Pix, cartão ou boleto. Leva menos de 1 minuto.</p>
+      </div>
+      <div class="step rev d2">
+        <span class="num">2</span>
+        <span class="si2">📩</span>
+        <h3>Receba no e-mail</h3>
+        <p>Assim que o pagamento é confirmado, o link de download chega no seu e-mail.</p>
+      </div>
+      <div class="step rev d3">
+        <span class="num">3</span>
+        <span class="si2">🖨️</span>
+        <h3>Imprima e pinte</h3>
+        <p>Baixe o PDF e imprima quantas vezes quiser, em casa ou na gráfica. É seu pra sempre.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="sec sec-alt">
+  <div class="container">
+    <div class="center rev">
+      <span class="lbl">Por que esse álbum é diferente</span>
+      <h2 class="stitle">Feito pra divertir de verdade</h2>
+      <p class="sbody">Cada detalhe foi pensado para ser fácil de imprimir, colorir e aproveitar em família.</p>
+    </div>
+    <div class="fg">
+      <div class="fc rev d1"><span class="fi">⚽</span><h3>Convocação Atualizada</h3><p>Os 26 jogadores convocados em 18/05/2026 — a lista mais recente da Seleção para a Copa!</p></div>
+      <div class="fc rev d2"><span class="fi">🎨</span><h3>Estilo HQ / Cartoon</h3><p>Traços grossos no estilo quadrinhos, perfeitos para crianças de todas as idades usarem qualquer material.</p></div>
+      <div class="fc rev d3"><span class="fi">🖨️</span><h3>Imprima Infinitas Vezes</h3><p>PDF que você baixa uma vez e imprime sempre. Ideal para presentear, usar na escola ou em casa.</p></div>
+      <div class="fc rev d1"><span class="fi">🎁</span><h3>+30 Desenhos para Colorir</h3><p>Jogadores, estádios, taças, bolas e muito mais — tudo em estilo HQ com traços grossos e divertidos!</p></div>
+      <div class="fc rev d2"><span class="fi">⚡</span><h3>Acesso na Hora</h3><p>Após confirmar o pagamento, o link chega direto no seu e-mail em poucos minutos. Sem espera.</p></div>
+      <div class="fc rev d3"><span class="fi">👨‍👩‍👧</span><h3>Para Toda a Família</h3><p>Pais, tios e professores adoram! Uma atividade criativa que tira a criança do celular com alegria.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ÁLBUM -->
+<section class="sec sec-dark">
+  <div class="container">
+    <div class="center rev">
+      <span class="lbl lbl-l">O que você recebe</span>
+      <h2 class="stitle stitle-y">O que tem no álbum?</h2>
+      <p class="sbody sbody-d">Um álbum completo com mais de 30 desenhos dos jogadores da Seleção, estádios, taças e muito mais!</p>
+    </div>
+    <div class="bki rev">
+      <div class="bno">📖</div>
+      <span class="tag">Álbum Principal</span>
+      <h3>Álbum de Colorir da Seleção Brasileira</h3>
+      <p>Todos os 26 convocados em páginas HQ estilo quadrinhos. +30 desenhos incríveis para colorir!</p>
+      <ul>
+        <li>✅ +30 desenhos para colorir</li>
+        <li>✅ 26 jogadores da Seleção</li>
+        <li>✅ Estádios e taças</li>
+        <li>✅ Estilo HQ / Cartoon</li>
+        <li>✅ PDF para imprimir</li>
+        <li>✅ Impressões ilimitadas</li>
+      </ul>
+    </div>
+    <div class="center" style="margin-top:46px">
+      <a href="https://pay.cakto.com.br/37oj6xq_921364" onclick="fbq('track', 'InitiateCheckout', {value: 14,99, currency: 'BRL', num_items: 1})" class="btn btn-primary rev">⚽ QUERO O ÁLBUM POR R$14,99</a>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="sec sec-alt">
+  <div class="container">
+    <div class="center rev">
+      <span class="lbl">Quem já comprou aprovou</span>
+      <h2 class="stitle">O que as famílias estão falando</h2>
+      <div class="stars" style="color:var(--yellow-d);font-size:20px;letter-spacing:3px;margin-top:8px">★★★★★</div>
+    </div>
+    <div class="tg">
+      <div class="tc rev d1">
+        <span class="tc-badge">📱 WhatsApp</span>
+        <span class="ts">★★★★★</span>
+        <p>"Meu filho ficou louco quando viu o Vini Jr no álbum! Imprimimos no mesmo dia, ficou lindo. Vale muito o preço."</p>
+        <div class="ta"><div class="av"><img src="foto1.png" alt="Juliana M." onerror="this.parentNode.textContent='👩'"></div><div><div class="an">Juliana M.</div><div class="ar">Mãe do Lorenzo, 6 anos · São Paulo</div></div></div>
+      </div>
+      <div class="tc rev d2">
+        <span class="tc-badge">📱 WhatsApp</span>
+        <span class="ts">★★★★★</span>
+        <p>"Comprei de noite, baixei na hora e imprimi no dia seguinte pra minha sobrinha. Ela amou o Endrick! Super recomendo."</p>
+        <div class="ta"><div class="av"><img src="foto2.png" alt="Camila R." onerror="this.parentNode.textContent='👩'"></div><div><div class="an">Camila R.</div><div class="ar">Tia orgulhosa · Belo Horizonte</div></div></div>
+      </div>
+      <div class="tc rev d3">
+        <span class="tc-badge">📱 WhatsApp</span>
+        <span class="ts">★★★★★</span>
+        <p>"Usei na escola durante a semana da Copa. As crianças ficaram super animadas! Os traços grossos facilitam muito pra colorir."</p>
+        <div class="ta"><div class="av"><img src="foto3.png" alt="Professora Ana Paula" onerror="this.parentNode.textContent='👩‍🏫'"></div><div><div class="an">Professora Ana Paula</div><div class="ar">Ensino Fundamental · Campinas</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIA -->
+<section class="sec guar-sec">
+  <div class="container">
+    <div class="guar-box rev">
+      <!-- Troque pelo arquivo gerado: selo-garantia.png -->
+      <img src="selo-garantia.png" alt="Selo de garantia de 7 dias ou seu dinheiro de volta" class="guar-seal-img">
+      <div class="guar-txt">
+        <h2>Risco zero pra você</h2>
+        <p>Você tem 7 dias para conhecer o álbum. Se por qualquer motivo não gostar, é só pedir e devolvemos 100% do valor. O risco é todo nosso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section class="sec offer-sec" id="oferta">
+  <div class="container" style="position:relative;z-index:2">
+    <div class="center rev" style="margin-bottom:38px">
+      <span class="lbl lbl-l">Promoção de lançamento</span>
+      <h2 class="stitle stitle-y">Garanta agora antes que volte ao preço normal</h2>
+    </div>
+    <div class="ob rev">
+      <span class="obt">🎨 Álbum de Colorir · Copa 2026</span>
+      <ul class="ol">
+        <li><span class="ck">✅</span> +30 desenhos dos jogadores da Seleção para colorir</li>
+        <li><span class="ck">✅</span> Estádios, taças e elementos da Copa 2026</li>
+        <li><span class="ck">✅</span> Estilo HQ com traços grossos — fácil de pintar</li>
+        <li><span class="ck">⚡</span> Acesso imediato após a compra</li>
+        <li><span class="ck">🖨️</span> PDF — imprima quantas vezes quiser</li>
+        <li><span class="ck">🛡️</span> Garantia de 7 dias ou seu dinheiro de volta</li>
+      </ul>
+      <div class="oold">De R$ 49,99</div>
+      <div class="price-row" style="justify-content:center">
+        <div class="oprice"><sup>R$</sup>14<sup>,99</sup></div>
+        <span class="off-badge">-84%</span>
+      </div>
+      <div class="onote">Pagamento único · sem mensalidade · para sempre seu</div>
+      <a href="https://pay.cakto.com.br/37oj6xq_921364" onclick="fbq('track', 'InitiateCheckout', {value: 14,99, currency: 'BRL', num_items: 1})" class="btn btn-primary btn-shine" style="font-size:1.5rem;padding:20px 44px">⚽ QUERO O MEU ÁLBUM AGORA</a>
+      <div class="guar" style="margin-top:18px"><span class="gi">🛡️</span><span class="gt"><b>Garantia de 7 dias.</b> Não gostou? Devolvemos cada centavo, sem perguntas.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec sec-alt">
+  <div class="container">
+    <div class="center rev">
+      <span class="lbl">Dúvidas frequentes</span>
+      <h2 class="stitle">Ficou alguma dúvida?</h2>
+    </div>
+    <div class="fw">
+      <div class="fi2 rev"><button class="fq" onclick="tFaq(this)">Posso pagar com Pix? <span class="farr">+</span></button><div class="fa2">Sim! Você paga com Pix (aprovação na hora), cartão de crédito ou boleto. Com o Pix o acesso costuma liberar em poucos minutos.</div></div>
+      <div class="fi2 rev"><button class="fq" onclick="tFaq(this)">Como vou receber o álbum? <span class="farr">+</span></button><div class="fa2">Após a confirmação do pagamento, o link para baixar o álbum é enviado automaticamente para o seu e-mail em poucos minutos.</div></div>
+      <div class="fi2 rev"><button class="fq" onclick="tFaq(this)">É um produto físico? <span class="farr">+</span></button><div class="fa2">Não. É um produto digital em PDF. Você baixa e imprime em casa ou em uma gráfica, quantas vezes quiser, sem custo adicional.</div></div>
+      <div class="fi2 rev"><button class="fq" onclick="tFaq(this)">E se eu não gostar? <span class="farr">+</span></button><div class="fa2">Você tem 7 dias de garantia. Se não gostar por qualquer motivo, é só entrar em contato que devolvemos 100% do valor pago.</div></div>
+      <div class="fi2 rev"><button class="fq" onclick="tFaq(this)">Posso imprimir mais de uma vez? <span class="farr">+</span></button><div class="fa2">Sim! O arquivo fica seu para sempre. Você pode imprimir as páginas quantas vezes precisar, para uso pessoal.</div></div>
+      <div class="fi2 rev"><button class="fq" onclick="tFaq(this)">Para qual faixa etária é indicado? <span class="farr">+</span></button><div class="fa2">É indicado para crianças que gostam de futebol e atividades de colorir. Ideal a partir dos 4 anos, com supervisão adulta para as menores.</div></div>
+      <div class="fi2 rev"><button class="fq" onclick="tFaq(this)">Funciona no celular? <span class="farr">+</span></button><div class="fa2">Sim! Você pode baixar pelo celular. Para imprimir, recomendamos abrir o PDF no computador ou enviar para uma gráfica próxima.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <h2>⚽ Bora pro Hexa!</h2>
+  <p>Álbum com +30 desenhos + BÔNUS por R$14,99! Acesso imediato, imprima à vontade!</p>
+  <a href="https://pay.cakto.com.br/37oj6xq_921364" onclick="fbq('track', 'InitiateCheckout', {value: 14,99, currency: 'BRL', num_items: 1})" class="btn btn-soft" style="font-size:1.5rem">🎉 COMPRAR O ÁLBUM AGORA</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fl">
+    <a href="#">Política de Privacidade</a>
+    <a href="#">Termos de Uso</a>
+    <a href="#">Suporte</a>
+  </div>
+  <div>© 2026 DukaShop · Todos os direitos reservados</div>
+</footer>
+
+<!-- WHATSAPP FLOAT — · ícone: wpp.png -->
+<a class="wa" href="https://wa.me/5511975522552?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20%C3%A1lbum%20de%20colorir%20da%20Copa%202026" onclick="fbq('track', 'Contact') target="_blank" rel="noopener" aria-label="Tirar dúvidas no WhatsApp">
+  <img src="wpp.png" alt="Falar no WhatsApp" class="wa-img">
+</a>
+
+<!-- STICKY MOBILE -->
+<div class="stick">
+  <a href="https://pay.cakto.com.br/37oj6xq_921364" onclick="fbq('track', 'InitiateCheckout', {value: 14,99, currency: 'BRL', num_items: 1})">
+    ⚽ BAIXAR O ÁLBUM POR R$14,99
+    
+  </a>
+</div>
+
+<script>
+// COUNTDOWN com localStorage
+(function(){
+  const KEY='copa26_timer_end';
+  let end=localStorage.getItem(KEY);
+  if(!end){end=Date.now()+29*60*1000+59*1000;localStorage.setItem(KEY,end);}else{end=parseInt(end);}
+  const el=document.getElementById('tmr');
+  function tick(){
+    const diff=Math.max(0,end-Date.now());
+    if(diff<=0){el.textContent='00:00';return;}
+    const m=Math.floor(diff/60000).toString().padStart(2,'0');
+    const s=Math.floor((diff%60000)/1000).toString().padStart(2,'0');
+    el.textContent=m+':'+s;
+    setTimeout(tick,500);
+  }
+  tick();
+})();
+
+// CONTADOR DE FAMÍLIAS
+(function(){
+  const el=document.getElementById('famcount');
+  if(!el)return;
+  let done=false;
+  const io=new IntersectionObserver(es=>{
+    es.forEach(e=>{
+      if(e.isIntersecting&&!done){
+        done=true;let n=1180;const target=1240;
+        const t=setInterval(()=>{n+=4;if(n>=target){n=target;clearInterval(t);}el.textContent=n.toLocaleString('pt-BR');},25);
+      }
+    });
+  },{threshold:.5});
+  io.observe(el);
+})();
+
+// FAQ
+function tFaq(btn){
+  const ans=btn.nextElementSibling;
+  const open=ans.classList.contains('open');
+  document.querySelectorAll('.fa2.open').forEach(a=>a.classList.remove('open'));
+  document.querySelectorAll('.fq.open').forEach(b=>b.classList.remove('open'));
+  if(!open){ans.classList.add('open');btn.classList.add('open');}
+}
+
+// SCROLL REVEAL
+const obs=new IntersectionObserver(es=>{
+  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});
+},{threshold:0.1});
+document.querySelectorAll('.rev').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
