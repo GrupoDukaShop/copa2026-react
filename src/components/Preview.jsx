@@ -1,7 +1,7 @@
 import { SectionHeader } from './ui/SectionHeader'
 
 const pages = [
-  { src: 'pagina_marqui.png', alt: 'Marquinhos', tag: 'Marquinhos ⚡', tagColor: 'bg-copa-gold text-navy-800' },
+  { src: 'ney.png', alt: 'Neymar Jr', tag: 'Neymar Jr ⚡', tagColor: 'bg-copa-gold text-navy-800' },
   { src: 'pagina_endrick.png', alt: 'Endrick',    tag: 'Endrick 👑',    tagColor: 'bg-copa-green text-white'   },
 ]
 
