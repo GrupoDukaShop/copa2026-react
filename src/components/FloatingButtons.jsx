@@ -48,10 +48,10 @@ export default function FloatingButtons() {
           {/* Completo — hero */}
           <a
             href="/ir?p=completo"
-            className="relative flex-1 flex flex-col items-center justify-center py-3.5 px-3 gap-0.5 bg-copa-green overflow-visible"
+            className="flex-1 flex flex-col items-center justify-center py-2.5 px-3 gap-0.5 bg-copa-green"
             style={{ boxShadow: '0 -4px 28px rgba(0,155,58,.55), inset 0 1px 0 rgba(255,255,255,.18)' }}
           >
-            <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-copa-gold text-navy-950 text-[9px] font-bold px-3 py-0.5 rounded-full whitespace-nowrap shadow-md">
+            <span className="bg-copa-gold text-navy-950 text-[9px] font-bold px-3 py-0.5 rounded-full whitespace-nowrap shadow-md">
               ⭐ MAIS POPULAR
             </span>
             <span className="font-display text-white text-base tracking-wide leading-none">
