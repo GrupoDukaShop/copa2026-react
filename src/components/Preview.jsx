@@ -4,7 +4,8 @@ import { SectionHeader } from './ui/SectionHeader'
 const albums = [
   {
     id: 'copa',
-    label: '⚽ Copa 2026',
+    emoji: '⚽',
+    label: 'Copa 2026',
     note: '+28 páginas com os principais craques da seleção',
     pages: [
       { src: 'ney.png',            tag: 'Neymar Jr ⚡', tagColor: 'bg-copa-gold text-navy-800' },
@@ -13,7 +14,8 @@ const albums = [
   },
   {
     id: 'atividades',
-    label: '🎨 Atividades',
+    emoji: '🎨',
+    label: 'Atividades',
     note: 'Passatempos, labirintos, caça-palavras e muito mais',
     pages: [
       { src: 'at1.png', tag: null },
@@ -22,7 +24,8 @@ const albums = [
   },
   {
     id: 'duka',
-    label: '📚 Duka Goods',
+    emoji: '📚',
+    label: 'Duka Goods',
     note: 'Conteúdo exclusivo da coleção Duka Goods',
     pages: [
       { src: 'duka1.png', tag: null },
@@ -47,18 +50,19 @@ export default function Preview() {
         </div>
 
         {/* Tabs */}
-        <div className="flex gap-2 justify-center mt-8 mb-8 flex-wrap">
+        <div className="grid grid-cols-3 gap-1.5 mt-8 mb-8 bg-gray-100 rounded-2xl p-1.5">
           {albums.map(a => (
             <button
               key={a.id}
               onClick={() => setActive(a.id)}
-              className={`px-5 py-2 rounded-full text-sm font-bold transition-all duration-150 ${
+              className={`flex flex-col items-center gap-1 py-3 px-2 rounded-xl transition-all duration-200 ${
                 active === a.id
-                  ? 'bg-navy-800 text-white shadow-md scale-105'
-                  : 'bg-white text-navy-700 border border-gray-200 hover:border-navy-700'
+                  ? 'bg-navy-800 text-white shadow-md'
+                  : 'text-navy-700/50 hover:text-navy-700 hover:bg-white/60'
               }`}
             >
-              {a.label}
+              <span className="text-2xl leading-none">{a.emoji}</span>
+              <span className="text-[11px] font-bold leading-tight text-center">{a.label}</span>
             </button>
           ))}
         </div>
