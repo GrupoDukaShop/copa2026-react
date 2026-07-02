@@ -9,10 +9,7 @@ export default function FloatingButtons() {
     <>
       {/* WhatsApp */}
       <a
-        href="https://wa.me/5511975522552?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20os%20livros%20de%20colorir%20da%20DukaShop"
-        onClick={() => fbTrack('Contact')}
-        target="_blank"
-        rel="noopener noreferrer"
+        href="/wpp"
         aria-label="Falar no WhatsApp"
         className="fixed right-4 bottom-[160px] sm:bottom-6 z-40 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center overflow-hidden shadow-[0_4px_16px_rgba(0,0,0,.25)] hover:scale-110 transition-transform"
       >
