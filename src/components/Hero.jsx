@@ -158,7 +158,7 @@ export default function Hero() {
               style={{ filter: 'drop-shadow(0 30px 60px rgba(0,0,0,.65))' }}
             />
             {/* Floating chips */}
-            <div className="absolute -top-4 -right-2 z-20 bg-copa-gold text-navy-800 font-display text-sm px-4 py-2 rounded-xl shadow-lg animate-wobble whitespace-nowrap">
+            <div className="absolute -top-10 -right-2 z-20 bg-copa-gold text-navy-800 font-display text-sm px-4 py-2 rounded-xl shadow-lg animate-wobble whitespace-nowrap">
               🎨 +30 Desenhos!
             </div>
             <div className="absolute bottom-8 -left-6 z-20 bg-copa-green text-white font-display text-sm px-4 py-2 rounded-xl shadow-lg animate-wobble2 whitespace-nowrap">
