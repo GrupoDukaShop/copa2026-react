@@ -40,9 +40,9 @@ export default function FloatingButtons() {
             href="/ir?p=basico"
             className="w-[33%] flex flex-col items-center justify-center py-3.5 px-2 gap-0.5 bg-[#00277A] border-r-2 border-white/10"
           >
-            <span className="font-body text-white/45 text-[8px] font-bold tracking-wide uppercase">Só o básico</span>
+            <span className="font-body text-white/45 text-[8px] font-bold tracking-wide uppercase">Básico</span>
             <span className="font-display text-white text-xl leading-none">R$9,99</span>
-            <span className="font-body text-white/35 text-[8px] font-semibold">só o álbum</span>
+            <span className="font-body text-white/35 text-[8px] font-semibold leading-tight text-center">álbum + atividades</span>
           </a>
 
           {/* Completo — hero */}
